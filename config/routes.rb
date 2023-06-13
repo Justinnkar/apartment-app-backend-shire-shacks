@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :shacks
-  devise_for :users
+  devise_for :users,
   path: '',
   path_names: {
     sign_in: 'login',
