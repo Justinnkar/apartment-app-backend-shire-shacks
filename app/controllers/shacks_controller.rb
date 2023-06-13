@@ -1,0 +1,2 @@
+class ShacksController < ApplicationController
+end
