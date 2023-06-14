@@ -12,14 +12,15 @@ RSpec.describe "Shacks", type: :request do
     it 'gets a list of shacks' do
       shack = user.shacks.create(
         street: "Shirewood Lane",
-        unit: 3,
+        unit: "3",
         hill: "Cobblestone Hill",
         square_footage: 1467,
         price: "800 Castars",
         bedrooms: 4,
         bathrooms: 3.5,
-        pets: 3,
-        image: "https://www.nztravelorganiser.com/wp-content/uploads/2019/09/hobbiton-1024x683.jpg"
+        pets: "3",
+        image: "https://www.nztravelorganiser.com/wp-content/uploads/2019/09/hobbiton-1024x683.jpg",
+        user_id: user.id
       )
       get '/shacks'
 
@@ -34,14 +35,15 @@ RSpec.describe "Shacks", type: :request do
       shack_params = {
         shack: {
           street: "Shirewood Lane",
-          unit: 3,
+          unit: "3",
           hill: "Cobblestone Hill",
           square_footage: 1467,
           price: "800 Castars",
           bedrooms: 4,
           bathrooms: 3.5,
-          pets: 3,
-          image: "https://www.nztravelorganiser.com/wp-content/uploads/2019/09/hobbiton-1024x683.jpg"
+          pets: "3",
+          image: "https://www.nztravelorganiser.com/wp-content/uploads/2019/09/hobbiton-1024x683.jpg",
+          user_id: user.id
         }
       }
       post '/shacks', params: shack_params

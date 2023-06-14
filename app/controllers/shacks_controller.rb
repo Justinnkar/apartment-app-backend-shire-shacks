@@ -15,6 +15,6 @@ class ShacksController < ApplicationController
     
       private
       def shack_params
-        params.require(:shack).permit(:street, :hill, :unit, :square_footage, :price, :bedrooms, :bathrooms, :pets, :image)
+        params.require(:shack).permit(:street, :hill, :unit, :square_footage, :price, :bedrooms, :bathrooms, :pets, :image, :user_id)
       end
 end
