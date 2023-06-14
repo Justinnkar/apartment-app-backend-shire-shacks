@@ -39,12 +39,12 @@ hedgehog_hill = [
 
 cobblestone_hill.each do |shack|
     user1.shacks.create(shack)
-    p "creating: #{apartment}"
+    p "creating: #{shack}"
 end
 
 hedgehog_hill.each do |shack|
     user2.shacks.create(shack)
-    p "creating: #{apartment}"
+    p "creating: #{shack}"
 end
 
 
